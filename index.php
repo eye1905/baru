@@ -39,17 +39,18 @@ if(isset($_GET)) {
 <head>
 	<title>Tester</title>
 </head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <body>
-<div>
+<div class="form-group col-md-4">
 	<form method="POST" action="index.php">
 		<input type="hidden" name="id_user" value="<?php echo $user['id']; ?>">
-		<input type="text" name="nama" value="<?php echo $user['nama']; ?>">
-		<input type="email" name="mail" value="<?php echo $user['email']; ?>">
-		<button type="submit">Simpan</button>
+		<input type="text" name="nama" class="form-control" value="<?php echo $user['nama']; ?>"> 
+		<input type="email" name="mail" class="form-control" value="<?php echo $user['email']; ?>">
+		<button type="submit" class="btn btn-primary">Simpan</button>
 	</form>
 </div>
 <div>
-	<table>
+	<table class="table table-responsive">
 		<tr>
 			<th>Nomor</th>
 			<th>Nama</th>
